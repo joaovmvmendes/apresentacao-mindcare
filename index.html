@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MindCare RH – Avaliação Integrada de Saúde Mental</title>
+    <style>
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background-color: #f5fdfc;
+        margin: 0;
+        padding: 0;
+        color: #003d3d;
+      }
+      header {
+        background: linear-gradient(to right, #5cc8b5, #5cabc8);
+        padding: 20px;
+        text-align: center;
+        color: white;
+      }
+      header img {
+        max-height: 100px;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #004d4d;
+      }
+      main {
+        max-width: 1000px;
+        margin: auto;
+        padding: 20px;
+      }
+      section,
+      .container {
+        background: white;
+        border-radius: 10px;
+        padding: 25px;
+        box-shadow: 0 0 20px #d3f3f0;
+        margin-bottom: 30px;
+      }
+      ul {
+        padding-left: 20px;
+      }
+      pre {
+        background: #e8f8f6;
+        padding: 10px;
+        border-left: 5px solid #5cc87a;
+        font-weight: bold;
+      }
+      .question {
+        margin: 1rem 0;
+      }
+      .options label {
+        margin: 0 0.3rem;
+      }
+      .result {
+        margin-top: 0.8rem;
+        font-weight: bold;
+      }
+      button {
+        margin-top: 1rem;
+        background: #5cc8b5;
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #4bb0a0;
+      }
+      @media (max-width: 768px) {
+        main {
+          padding: 10px;
+        }
+        header img {
+          max-height: 80px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="logo-mindcare.png" alt="MindCare RH Logo" />
+      <h1>MindCare RH</h1>
+      <p>Monitoramento de Saúde Mental para Pequenas Empresas</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>Sobre o Projeto MindCare RH</h2>
+        <p>
+          <strong>MindCare RH</strong> é uma plataforma digital desenvolvida
+          como parte do Trabalho de Conclusão de Curso (TCC) de João Vítor
+          Martins Villela Mendes, estudante de Engenharia de Software no Centro
+          Universitário Fundação Assis Gurgacz. O projeto nasce da necessidade
+          real enfrentada por pequenas empresas brasileiras: a ausência de
+          soluções viáveis e acessíveis para o cuidado contínuo com a saúde
+          mental de seus colaboradores.
+        </p>
+
+        <p>
+          Pequenas empresas, muitas vezes com equipes reduzidas e orçamentos
+          limitados, têm dificuldade em implantar programas de bem-estar
+          psicológico ou contratar profissionais especializados. A
+          <strong>MindCare RH</strong> foi concebida como uma ferramenta de
+          autogestão da saúde emocional, baseada em ciência, tecnologia e
+          simplicidade operacional.
+        </p>
+
+        <p>
+          A plataforma tem como público-alvo empresas com até 100 colaboradores
+          e propõe avaliações semanais de bem-estar utilizando instrumentos
+          psicológicos <strong>validados internacionalmente</strong>: o WHO‑5
+          Well-Being Index, o Copenhagen Burnout Inventory (CBI) e o
+          Effort‑Reward Imbalance (ERI).
+        </p>
+
+        <p>
+          Com base nesses testes, é calculado o
+          <strong>IRS – Índice de Risco de Sobrecarga</strong>, apresentado ao
+          RH de forma anônima e gráfica. A proposta é transformar dados
+          subjetivos em indicadores objetivos, que auxiliem os gestores a
+          tomarem decisões mais humanas e estratégicas.
+        </p>
+
+        <p>
+          Além disso, o projeto está fundamentado em literatura científica
+          reconhecida e adota as boas práticas de desenvolvimento de software,
+          com arquitetura SaaS escalável, utilização de Node.js, Angular e
+          Firebase, além de seguir princípios éticos de privacidade e
+          consentimento previstos pela LGPD.
+        </p>
+      </section>
+      <section>
+        <h2>Resultados Esperados</h2>
+        <p>A expectativa é que o uso contínuo da plataforma contribua para:</p>
+        <ul>
+          <li>Redução de sintomas de estresse, exaustão e desmotivação;</li>
+          <li>
+            Melhoria do clima organizacional e do engajamento das equipes;
+          </li>
+          <li>Identificação precoce de padrões de sobrecarga;</li>
+          <li>Decisões de RH mais humanas e baseadas em dados;</li>
+          <li>
+            Promoção de uma cultura de cuidado emocional dentro das empresas.
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Referências Científicas</h2>
+        <ul>
+          <li>
+            Bech, P. et al. (1998). The WHO-5 Well-Being Index: A validation
+            study in diabetes patients.
+          </li>
+          <li>
+            Kristensen, T. S. et al. (2005). The Copenhagen Burnout Inventory.
+          </li>
+          <li>
+            Siegrist, J. (1996). Adverse health effects of
+            high-effort/low-reward conditions.
+          </li>
+          <li>
+            Ebert, D. D. et al. (2018). Internet-based cognitive behavioral
+            therapy for anxiety and depression.
+          </li>
+          <li>
+            Organização Mundial da Saúde (2022). Mental health in the workplace.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Objetivo da Validação</h2>
+        <p>
+          Esta página foi preparada especialmente para você, profissional de RH,
+          com o intuito de apresentar o funcionamento dos testes e do cálculo do
+          Índice de Risco de Sobrecarga (IRS). Ao final de sua experiência, sua
+          opinião será fundamental para a validação científica e prática desta
+          proposta.
+        </p>
+        <p>Pedimos que avalie os seguintes pontos:</p>
+        <ul>
+          <li>A clareza e relevância das perguntas apresentadas nos testes.</li>
+          <li>A usabilidade da interface e facilidade de preenchimento.</li>
+          <li>
+            A utilidade prática do IRS como indicador de risco para gestão de
+            pessoas.
+          </li>
+          <li>Sugestões de melhorias ou considerações gerais.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Como Enviar seu Feedback</h2>
+        <p>
+          Após testar os instrumentos, por favor envie suas observações e
+          sugestões para o e-mail: <strong>jvmax98@gmail.com</strong>.
+        </p>
+      </section>
+
+      <section>
+        <h2>WHO‑5 – Well-Being Index</h2>
+        <p><strong>Objetivo:</strong> avaliar o bem-estar emocional geral.</p>
+        <p>
+          Composto por 5 itens, com escala de resposta de 0 (nunca) a 5
+          (sempre).
+        </p>
+        <ul>
+          <li>Senti-me bem disposto e ativo.</li>
+          <li>Senti-me calmo e relaxado.</li>
+          <li>Acordei com disposição para o dia.</li>
+          <li>Senti que minha vida estava cheia de coisas interessantes.</li>
+          <li>Senti-me alegre e de bom humor.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>CBI – Copenhagen Burnout Inventory (Domínio Pessoal)</h2>
+        <p>
+          <strong>Objetivo:</strong> mensurar exaustão física e emocional no
+          trabalho.
+        </p>
+        <p>
+          Versão com 6 itens, com respostas convertidas em escala de 0 a 100.
+        </p>
+        <ul>
+          <li>Com que frequência você se sente cansado?</li>
+          <li>Com que frequência sente-se emocionalmente exausto?</li>
+          <li>Você se sente esgotado ao final de um dia de trabalho?</li>
+          <li>
+            Você sente que precisa de mais tempo para descansar e se recuperar?
+          </li>
+          <li>Você sente que está trabalhando além do que deveria?</li>
+          <li>
+            Você sente dificuldade em lidar com as exigências emocionais do seu
+            trabalho?
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>ERI – Effort-Reward Imbalance (Subescala de Esforço)</h2>
+        <p>
+          <strong>Objetivo:</strong> avaliar o esforço percebido em relação às
+          recompensas recebidas.
+        </p>
+        <p>
+          Utiliza 5 itens com escala de 1 (discordo totalmente) a 4 (concordo
+          totalmente).
+        </p>
+        <ul>
+          <li>Tenho muitas responsabilidades em meu trabalho.</li>
+          <li>Tenho que trabalhar muito rapidamente.</li>
+          <li>
+            Tenho pressão de tempo constante devido à grande carga de trabalho.
+          </li>
+          <li>Tenho que realizar muitas tarefas ao mesmo tempo.</li>
+          <li>Tenho muitas interrupções e distrações durante o trabalho.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Cálculo do IRS – Índice de Risco de Sobrecarga</h2>
+        <p>
+          O IRS é calculado como a média dos três escores, padronizados em
+          escala de 0 a 100:
+        </p>
+        <pre>IRS = (Esforço + Burnout + (100 – Bem-estar)) ÷ 3</pre>
+        <p><strong>Classificação:</strong></p>
+        <ul>
+          <li><strong>IRS abaixo de 40:</strong> sem sinais críticos</li>
+          <li><strong>IRS entre 40 e 70:</strong> atenção moderada</li>
+          <li><strong>IRS acima de 70:</strong> forte indício de sobrecarga</li>
+        </ul>
+      </section>
+
+      <section class="container">
+        <h2>Simulação Interativa dos Testes</h2>
+
+        <!-- WHO-5 -->
+        <div class="test" id="who5">
+          <h3>1. WHO-5 – Bem-estar Subjetivo</h3>
+          <p>Responda de 0 (nunca) a 5 (sempre):</p>
+          <div class="questions"></div>
+          <button onclick="calcularWHO5()">Calcular Índice WHO-5</button>
+          <div class="result" id="resultadoWHO5"></div>
+          <p style="font-size: 0.9rem; color: #555">
+            Quanto mais alto o índice, maior o bem-estar e menor o risco no IRS.
+          </p>
+        </div>
+
+        <!-- CBI -->
+        <div class="test" id="cbi">
+          <h3>2. CBI – Burnout (Domínio Pessoal)</h3>
+          <p>Responda de 0 (nunca) a 5 (sempre):</p>
+          <div class="questions"></div>
+          <button onclick="calcularCBI()">Calcular Índice CBI</button>
+          <div class="result" id="resultadoCBI"></div>
+          <p style="font-size: 0.9rem; color: #555">
+            Quanto mais alto o índice, maior a exaustão emocional e maior o
+            risco no IRS.
+          </p>
+        </div>
+
+        <!-- ERI -->
+        <div class="test" id="eri">
+          <h3>3. ERI – Esforço Percebido</h3>
+          <p>Responda de 1 (discordo totalmente) a 4 (concordo totalmente):</p>
+          <div class="questions"></div>
+          <button onclick="calcularERI()">Calcular Índice ERI</button>
+          <div class="result" id="resultadoERI"></div>
+          <p style="font-size: 0.9rem; color: #555">
+            Quanto mais alto o índice, maior o esforço percebido e maior o risco
+            no IRS.
+          </p>
+        </div>
+
+        <!-- IRS -->
+        <div class="test" id="irs">
+          <h3>Cálculo Final – Índice de Risco de Sobrecarga (IRS)</h3>
+          <button onclick="calcularIRS()">Calcular IRS</button>
+          <div class="result" id="resultadoIRS"></div>
+          <div
+            id="barraIRS"
+            style="height: 20px; border-radius: 5px; margin-top: 10px"
+          ></div>
+        </div>
+      </section>
+
+      <footer
+        style="
+          text-align: center;
+          font-size: 0.9rem;
+          color: #666;
+          margin: 30px 0;
+        "
+      >
+        © 2025 – João Vítor Martins Villela Mendes | Engenharia de Software –
+        FAG | jvmax98@gmail.com
+      </footer>
+    </main>
+
+    <script>
+      function criarQuestoesComPerguntas(
+        containerId,
+        perguntas,
+        escalaMin,
+        escalaMax
+      ) {
+        const container = document.querySelector(`#${containerId} .questions`);
+        perguntas.forEach((texto, i) => {
+          const div = document.createElement("div");
+          div.className = "question";
+          div.innerHTML = `<div><strong>${
+            i + 1
+          }. ${texto}</strong></div><div class="options" style="margin-top: 5px; margin-bottom: 10px;">`;
+          for (let j = escalaMin; j <= escalaMax; j++) {
+            div.innerHTML += `<label style="margin-right: 12px;"><input type="radio" name="${containerId}_q${
+              i + 1
+            }" value="${j}"> ${j}</label>`;
+          }
+          div.innerHTML += "</div>";
+          container.appendChild(div);
+        });
+      }
+
+      // Inserir perguntas reais
+      const who5Perguntas = [
+        "Senti-me bem disposto e ativo.",
+        "Senti-me calmo e relaxado.",
+        "Acordei com disposição para o dia.",
+        "Senti que minha vida estava cheia de coisas interessantes.",
+        "Senti-me alegre e de bom humor.",
+      ];
+      const cbiPerguntas = [
+        "Com que frequência você se sente cansado?",
+        "Com que frequência sente-se emocionalmente exausto?",
+        "Você se sente esgotado ao final de um dia de trabalho?",
+        "Você sente que precisa de mais tempo para descansar e se recuperar?",
+        "Você sente que está trabalhando além do que deveria?",
+        "Você sente dificuldade em lidar com as exigências emocionais do seu trabalho?",
+      ];
+      const eriPerguntas = [
+        "Tenho muitas responsabilidades em meu trabalho.",
+        "Tenho que trabalhar muito rapidamente.",
+        "Tenho pressão de tempo constante devido à grande carga de trabalho.",
+        "Tenho que realizar muitas tarefas ao mesmo tempo.",
+        "Tenho muitas interrupções e distrações durante o trabalho.",
+      ];
+
+      // Chamada correta no carregamento da página
+      window.onload = () => {
+        criarQuestoesComPerguntas("who5", who5Perguntas, 0, 5);
+        criarQuestoesComPerguntas("cbi", cbiPerguntas, 0, 5);
+        criarQuestoesComPerguntas("eri", eriPerguntas, 1, 4);
+      };
+
+      function getRespostas(containerId, totalQuestoes) {
+        let respostas = [];
+        for (let i = 1; i <= totalQuestoes; i++) {
+          const val = document.querySelector(
+            `input[name="${containerId}_q${i}"]:checked`
+          );
+          respostas.push(val ? parseInt(val.value) : null);
+        }
+        return respostas;
+      }
+
+      function calcularWHO5() {
+        const respostas = getRespostas("who5", 5);
+        if (respostas.includes(null))
+          return alert("Responda todas as perguntas do WHO-5.");
+        const soma = respostas.reduce((a, b) => a + b, 0);
+        const escore = (soma / 25) * 100;
+        document.getElementById(
+          "resultadoWHO5"
+        ).innerText = `Índice: ${escore.toFixed(2)}`;
+        window.who5Score = escore;
+      }
+
+      function calcularCBI() {
+        const respostas = getRespostas("cbi", 6);
+        if (respostas.includes(null))
+          return alert("Responda todas as perguntas do CBI.");
+        const soma = respostas.reduce((a, b) => a + b, 0);
+        const escore = (soma / 30) * 100;
+        document.getElementById(
+          "resultadoCBI"
+        ).innerText = `Índice: ${escore.toFixed(2)}`;
+        window.cbiScore = escore;
+      }
+
+      function calcularERI() {
+        const respostas = getRespostas("eri", 5);
+        if (respostas.includes(null))
+          return alert("Responda todas as perguntas do ERI.");
+        const soma = respostas.reduce((a, b) => a + b, 0);
+        const media = soma / 5;
+        const escore = ((media - 1) / 3) * 100;
+        document.getElementById(
+          "resultadoERI"
+        ).innerText = `Índice: ${escore.toFixed(2)}`;
+        window.eriScore = escore;
+      }
+
+      function calcularIRS() {
+        if (
+          typeof who5Score === "undefined" ||
+          typeof cbiScore === "undefined" ||
+          typeof eriScore === "undefined"
+        ) {
+          return alert("Calcule todos os índices individuais antes do IRS.");
+        }
+        const IRS = (eriScore + cbiScore + (100 - who5Score)) / 3;
+        document.getElementById("resultadoIRS").innerText = `IRS: ${IRS.toFixed(
+          2
+        )}`;
+
+        const barra = document.getElementById("barraIRS");
+        if (IRS < 40) {
+          barra.style.backgroundColor = "#4CAF50"; // verde
+          barra.title = "Sem sinais críticos";
+        } else if (IRS <= 70) {
+          barra.style.backgroundColor = "#FFC107"; // amarelo
+          barra.title = "Atenção moderada";
+        } else {
+          barra.style.backgroundColor = "#F44336"; // vermelho
+          barra.title = "Forte indício de sobrecarga";
+        }
+      }
+    </script>
+  </body>
+</html>
