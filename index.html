@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>MindCare RH – Avaliação Integrada de Saúde Mental</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0; padding: 0;
+            background-color: #f5fdfc; color: #333;
+        }
+        header {
+            background: linear-gradient(to right, #5cc8b5, #5cabc8);
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        header img {
+            max-height: 100px;
+        }
+        h1, h2, h3 {
+            color: #005d66;
+        }
+        main {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+        section {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        iframe {
+            width: 100%;
+            height: 700px;
+            border: none;
+            border-radius: 8px;
+        }
+        pre {
+            background: #e8f8f6;
+            padding: 10px;
+            border-left: 5px solid #5cc87a;
+            font-weight: bold;
+        }
+        @media (max-width: 768px) {
+            main { padding: 10px; }
+            header img { max-height: 80px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="ChatGPT Image Jul 6, 2025 at 12_05_28 PM.png" alt="MindCare RH Logo">
+    <h1>MindCare RH</h1>
+    <p>Monitoramento de Saúde Mental para Pequenas Empresas</p>
+</header>
+
+<main>
+    <section>
+        <h2>Apresentação</h2>
+        <p>A <strong>MindCare RH</strong> é uma plataforma digital desenvolvida para apoiar pequenas empresas no monitoramento da saúde mental de seus colaboradores. Ela realiza avaliações semanais usando instrumentos validados cientificamente para rastrear sinais de sobrecarga, exaustão e queda de bem-estar.</p>
+    </section>
+
+    <section>
+        <h2>WHO‑5 – Well-Being Index</h2>
+        <p><strong>Objetivo:</strong> avaliar o bem-estar emocional geral.</p>
+        <p>Composto por 5 itens, com escala de resposta de 0 (nunca) a 5 (sempre).</p>
+        <p><strong>Exemplos de perguntas:</strong></p>
+        <ul>
+            <li>Senti-me bem disposto e ativo.</li>
+            <li>Senti-me calmo e relaxado.</li>
+            <li>Acordei com disposição para o dia.</li>
+            <li>Senti que minha vida estava cheia de coisas interessantes.</li>
+            <li>Senti-me alegre e de bom humor.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>CBI – Copenhagen Burnout Inventory (Domínio Pessoal)</h2>
+        <p><strong>Objetivo:</strong> mensurar exaustão física e emocional no trabalho.</p>
+        <p>Versão com 6 itens, com respostas convertidas em escala de 0 a 100.</p>
+        <p><strong>Exemplos de perguntas:</strong></p>
+        <ul>
+            <li>Com que frequência você se sente cansado?</li>
+            <li>Com que frequência sente-se emocionalmente exausto?</li>
+            <li>Você se sente esgotado ao final de um dia de trabalho?</li>
+            <li>Você sente que precisa de mais tempo para descansar e se recuperar?</li>
+            <li>Você sente que está trabalhando além do que deveria?</li>
+            <li>Você sente dificuldade em lidar com as exigências emocionais do seu trabalho?</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>ERI – Effort-Reward Imbalance (Subescala de Esforço)</h2>
+        <p><strong>Objetivo:</strong> avaliar o esforço percebido em relação às recompensas recebidas.</p>
+        <p>Utiliza 5 itens com escala de 1 (discordo totalmente) a 4 (concordo totalmente).</p>
+        <p><strong>Exemplos de perguntas:</strong></p>
+        <ul>
+            <li>Tenho muitas responsabilidades em meu trabalho.</li>
+            <li>Tenho que trabalhar muito rapidamente.</li>
+            <li>Tenho pressão de tempo constante devido à grande carga de trabalho.</li>
+            <li>Tenho que realizar muitas tarefas ao mesmo tempo.</li>
+            <li>Tenho muitas interrupções e distrações durante o trabalho.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Cálculo do IRS – Índice de Risco de Sobrecarga</h2>
+        <p>O IRS é calculado com base nos três testes aplicados:</p>
+        <pre>IRS = (0,4 × EsforçoScore) + (0,3 × BurnoutScore) + (0,3 × (100 – WellBeingScore))</pre>
+        <p><strong>Classificação:</strong></p>
+        <ul>
+            <li><strong>IRS abaixo de 40:</strong> sem sinais críticos</li>
+            <li><strong>IRS entre 40 e 70:</strong> atenção moderada</li>
+            <li><strong>IRS acima de 70:</strong> forte indício de sobrecarga</li>
+        </ul>
+        <p>Esses dados são apresentados de forma anônima ao RH em gráficos semanais.</p>
+    </section>
+
+    <section>
+        <h2>Aplicação Prática dos Testes</h2>
+        <p>Abaixo você pode realizar os três testes de forma integrada e visualizar automaticamente o cálculo do seu IRS:</p>
+        <iframe src="Demonstração de Testes Integrados.html"></iframe>
+    </section>
+</main>
+
+</body>
+</html>

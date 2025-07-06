@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>MindCare RH – Avaliação Integrada (WHO-5, CBI, ERI)</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
+        h1, h2, h3 { color: #003366; }
+        .question { margin-bottom: 20px; }
+        .result { margin-top: 30px; font-weight: bold; font-size: 1.1em; }
+        input[type=number] { width: 60px; padding: 5px; margin-top: 5px; }
+        button { padding: 10px 20px; margin-top: 20px; font-size: 1em; }
+        .highlight { background-color: #f0f8ff; padding: 10px; border-left: 4px solid #003366; margin: 20px 0; }
+        .section { margin-top: 50px; }
+    </style>
+</head>
+<body>
+    <h1>MindCare RH – Avaliação Integrada de Saúde Mental</h1>
+
+    <p>Esta aplicação realiza a avaliação integrada da saúde mental de colaboradores com base em três instrumentos validados:</p>
+    <ul>
+        <li><strong>WHO‑5</strong> – Bem-estar subjetivo</li>
+        <li><strong>CBI</strong> – Burnout (domínio pessoal)</li>
+        <li><strong>ERI</strong> – Esforço percebido</li>
+    </ul>
+
+    <!-- WHO-5 -->
+    <div class="section">
+        <h2>1. WHO‑5 – Bem-estar Subjetivo</h2>
+        <p>Escala de 0 a 5 para cada item. Total de 0 a 25, multiplicado por 4 para escore percentual.</p>
+        <form id="whoForm">
+            <div class="question"><label>1. Senti-me alegre e bem-disposto(a):</label><br><input type="number" name="q1" min="0" max="5" required></div>
+            <div class="question"><label>2. Senti-me calmo(a) e relaxado(a):</label><br><input type="number" name="q2" min="0" max="5" required></div>
+            <div class="question"><label>3. Senti-me ativo(a) e vigoroso(a):</label><br><input type="number" name="q3" min="0" max="5" required></div>
+            <div class="question"><label>4. Acordei sentindo-me descansado(a):</label><br><input type="number" name="q4" min="0" max="5" required></div>
+            <div class="question"><label>5. Minha vida diária esteve cheia de interesse:</label><br><input type="number" name="q5" min="0" max="5" required></div>
+        </form>
+    </div>
+
+    <!-- CBI -->
+    <div class="section">
+        <h2>2. CBI – Burnout (Domínio Pessoal)</h2>
+        <p>Escala de 0 a 100 (saltos de 25). Média aritmética final.</p>
+        <form id="cbiForm">
+            <div class="question"><label>1. Com que frequência você se sente cansado(a)?</label><br><input type="number" name="c1" min="0" max="100" step="25" required></div>
+            <div class="question"><label>2. Você se sente fisicamente exausto(a)?</label><br><input type="number" name="c2" min="0" max="100" step="25" required></div>
+            <div class="question"><label>3. Você se sente emocionalmente esgotado(a)?</label><br><input type="number" name="c3" min="0" max="100" step="25" required></div>
+            <div class="question"><label>4. Você se sente fraco(a) e vulnerável?</label><br><input type="number" name="c4" min="0" max="100" step="25" required></div>
+            <div class="question"><label>5. Falta energia no tempo livre?</label><br><input type="number" name="c5" min="0" max="100" step="25" required></div>
+            <div class="question"><label>6. Sente-se sem forças para lidar com o dia a dia?</label><br><input type="number" name="c6" min="0" max="100" step="25" required></div>
+        </form>
+    </div>
+
+    <!-- ERI -->
+    <div class="section">
+        <h2>3. ERI – Esforço Percebido</h2>
+        <p>Escala de 1 a 4. Média final entre os 5 itens.</p>
+        <form id="eriForm">
+            <div class="question"><label>1. Tenho muitas responsabilidades:</label><br><input type="number" name="e1" min="1" max="4" required></div>
+            <div class="question"><label>2. Trabalho muito rapidamente:</label><br><input type="number" name="e2" min="1" max="4" required></div>
+            <div class="question"><label>3. Pressão de tempo constante:</label><br><input type="number" name="e3" min="1" max="4" required></div>
+            <div class="question"><label>4. Muitas tarefas simultâneas:</label><br><input type="number" name="e4" min="1" max="4" required></div>
+            <div class="question"><label>5. Muitas interrupções no trabalho:</label><br><input type="number" name="e5" min="1" max="4" required></div>
+        </form>
+    </div>
+
+    <!-- IRS -->
+    <div class="section">
+        <h2>4. Cálculo do IRS – Índice de Risco de Saúde Mental</h2>
+        <p>Fórmula aplicada:</p>
+        <div class="highlight">
+            <strong>IRS = (100 - WHO5%) + (CBI/4) + (ERI × 25)</strong>
+        </div>
+        <p>Valores esperados:</p>
+        <ul>
+            <li><strong>0 a 99</strong>: Baixo risco</li>
+            <li><strong>100 a 149</strong>: Moderado risco</li>
+            <li><strong>150 ou mais</strong>: Alto risco de alerta</li>
+        </ul>
+        <button onclick="calcularIRS()">Calcular IRS</button>
+        <div class="result" id="resultadoIRS"></div>
+    </div>
+
+    <script>
+        function calcularIRS() {
+            // WHO
+            const w = [...document.forms['whoForm'].elements].map(e => parseInt(e.value)).filter(v => !isNaN(v));
+            const who_total = w.reduce((a, b) => a + b, 0);
+            const who_pct = who_total * 4;
+
+            // CBI
+            const c = [...document.forms['cbiForm'].elements].map(e => parseInt(e.value)).filter(v => !isNaN(v));
+            const cbi_avg = c.reduce((a, b) => a + b, 0) / c.length;
+
+            // ERI
+            const e = [...document.forms['eriForm'].elements].map(e => parseInt(e.value)).filter(v => !isNaN(v));
+            const eri_avg = e.reduce((a, b) => a + b, 0) / e.length;
+
+            // IRS Calculation
+            const irs = (100 - who_pct) + (cbi_avg / 4) + (eri_avg * 25);
+            let interpretacao = "";
+            if (irs < 100) {
+                interpretacao = "Baixo risco de saúde mental.";
+            } else if (irs < 150) {
+                interpretacao = "Risco moderado – atenção recomendada.";
+            } else {
+                interpretacao = "Alto risco – avaliação urgente recomendada.";
+            }
+
+            document.getElementById("resultadoIRS").innerText =
+                "IRS final: " + irs.toFixed(2) + " → " + interpretacao;
+        }
+    </script>
+</body>
+</html>
